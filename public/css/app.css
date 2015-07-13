@@ -1,0 +1,153 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.bk-header {
+	margin: 2em 0;
+	font-family: 'ImperatorBronzeSmallCaps', serif;
+	font-size: 36px;
+	text-align:center;
+}
+
+.bk-h1 {
+	font-size: 48px;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	padding-top: 0.5em;
+	padding-bottom: 0.35em;
+}
+
+.bk-list {
+	width: 100%;
+}
+
+.bk-block .bk-click, .bk-block .bk-text {
+	width: 100%;	
+	margin: auto;
+}
+
+.bk-title-block {
+	text-align: center;
+	font-family: "Imperator", serif;
+	margin: 0;
+	max-width: 75%;
+	display: inline-block;
+}
+
+.bk-title{
+	margin: 0;
+	margin-bottom: 0.5em;
+	font-weight: bold;	
+	font-size: 16px;
+}
+
+.bk-author{
+	margin: 0;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.bk-text{
+	max-width: 20em;
+	text-align: center;
+	font-style: italic;
+	/*font-weight: bold;*/
+	font-family: "Sorts Mill Goudy", serif;
+	font-size: 20px;	
+	quotes:"“" "”";
+}
+
+.bk-target{
+	/*display: none;*/
+	background-color:#F7F5F0;	
+	display: none;
+}
+
+.bk-text:before {
+	content: open-quote;
+}
+
+.bk-text:after {
+	content: close-quote;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.bk-block {
+	position: relative;
+	padding-bottom: 1.5em; 
+	text-align:center;
+	width: 100%;
+	cursor:pointer;
+}
+
+.bk-block:after {
+	content:'\2304';
+	display:block;
+	position: absolute;
+	right: 10%;
+	top: 1em;
+	transform: translateY(0.25em) translateX(-0.25em) rotate(-0.25turn);
+	-webkit-transform: translateY(0.25em) translateX(-0.25em) rotate(-0.25turn);
+	-webkit-transition: transform 0.25s;
+	transition: transform 0.25s;
+
+}
+
+.bk-block.active:after {
+	transform: translateY(0) rotate(0);
+	-webkit-transform: translateY(0) rotate(0);
+	-webkit-transition: transform 0.25s;
+	transition: transform 0.25s;
+}
+
+.bk-block.active:after {
+	content:'\2304'
+}
+
+.bk-date {
+	font-family:'Rounded Elegance',serif;
+	color: #333;
+}
+
+.bk-click {
+	padding: 0 12.5%;
+	max-width: 30em;
+	margin-bottom: 1em;
+	display:inline-block;
+	width: 100%;
+}
+/*
+.bk-click:before {
+	font-size: 20px;
+	content: '\00AB';
+	display: inline-block;
+	padding-right: 4.5%;
+	vertical-align:top;
+	margin: 0.5em 0;
+}
+
+.bk-click:after {
+	font-size: 20px;
+	content: '\00BB';
+	display: inline-block;
+	padding-left: 4.5%;
+	vertical-align: top;
+	margin: 0.5em 0;
+}
+*/
+.bk-block.active .bk-target {
+	padding: 1em 10px;
+	margin-top: 1em;
+	display: block;
+}
+
+
+
