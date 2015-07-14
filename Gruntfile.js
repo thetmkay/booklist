@@ -1,5 +1,11 @@
 module.exports = function(grunt) {
 
+	require('load-grunt-tasks')(grunt);
+
+	require('load-grunt-subtasks')(grunt,{
+			base:['../node_modules']
+	});
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         env: {
@@ -46,12 +52,6 @@ module.exports = function(grunt) {
             }
         }
     });
-
-    grunt.loadNpmTasks('grunt-env');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-nodemon');
-    grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('build', [ 'compass']);
     grunt.registerTask('default', ['env:dev', 'build', 'concurrent:dev']);
