@@ -31,5 +31,8 @@
     "nunjucks": "~1.1.0",
     "twitter-node-client": "thetmkay/TwitterJSClient",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "fontfaceobserver": "^1.5.0"
   }
 }

@@ -1,4 +1,5 @@
 @import "gn/footer";
+@import "fonts";
 @import "gn/mixins";
 
 $small-screen:450px;
@@ -10,9 +11,39 @@ html,body {
 	padding: 0;
 }
 
+.sorts-mill-goudy {
+	.bk-text {
+		font-family: "Sorts Mill Goudy", serif;
+	}
+}
+
+.imperator {
+	.bk-title-block {
+		font-family: "Imperator", serif;
+	}
+	
+	.footer {
+		font-family: 'Imperator', sans-serif;
+	}
+}
+
+.rounded-elegance {
+	.bk-date {
+		font-family:'Rounded Elegance',serif;
+	}
+}
+
+.imperatorbronzesmallcaps {
+	.bk-header {
+		font-family: 'ImperatorBronzeSmallCaps', serif;
+	}
+}
+
+
+
 .bk-header {
 	margin: 2em 0;
-	font-family: 'ImperatorBronzeSmallCaps', serif;
+	font-family: serif;
 	padding-left: 10px;
 	text-align:center;
 }
@@ -40,11 +71,13 @@ html,body {
 	margin: auto;
 }
 
+
+
 .bk-title-block {
 	text-align: center;
-	font-family: "Imperator", serif;
 	margin: 0;
 	max-width: 75%;
+	font-family: serif;
 	display: inline-block;
 }
 
@@ -66,7 +99,7 @@ html,body {
 	text-align: center;
 	font-style: italic;
 	/*font-weight: bold;*/
-	font-family: "Sorts Mill Goudy", serif;
+	font-family: serif;
 	font-size: 20px;	
 	quotes:"“" "”";
 }
@@ -121,8 +154,9 @@ html,body {
 	content:'\2304'
 }
 
+
 .bk-date {
-	font-family:'Rounded Elegance',serif;
+	font-family: serif;
 	color: #333;
 }
 
@@ -138,10 +172,14 @@ html,body {
 	margin-top: 1em;
 	display: block;
 }
+
+
+
+
 .footer {
+	font-family: sans-serif;
 	position:relative;
 	background-color:#F7F5F0;
-	font-family: 'Imperator', serif;
 }
 .ftr-link {
 	text-decoration: none;
