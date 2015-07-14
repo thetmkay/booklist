@@ -4,9 +4,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         env: {
             dev: {
-				src:'env.json'
+				src:'env.json',
+                NODE_ENV: 'development'
             },
             prod: {
+				src:'env.json',
                 NODE_ENV: 'production'
             }
         },
