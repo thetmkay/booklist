@@ -7,10 +7,10 @@ var express = require('express'),
 
 var Twitter = require('twitter-node-client').Twitter,
 	config = {
-		"consumerKey":"QSBn6rcUlCtDigDpkperUXxhj",
-		"consumerSecret":"MV3qIRbFy9eaIYLEV014Ri1Iai9t0305tti7g15XUAGByFGfFC",
-		"accessToken":"159273941-Qfvtm9j7IAi4QNcYej7tLohjoQN1BggIS4kkdyeN",
-		"accessTokenSecret":"U4jYKmH15gHYSah9jmXbv68HclOkeRS7ExWFQ80kBNMgm",
+		"consumerKey":process.env.BLT_KEY,
+		"consumerSecret":process.env.BLT_SECRET,
+		"accessToken":process.env.BLT_TOKEN,
+		"accessTokenSecret":process.env.BLT_TOKEN_SECRET,
 		"callbackUrl":""
 	},
 	twitter = new Twitter(config);
