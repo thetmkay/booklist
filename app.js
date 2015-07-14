@@ -33,18 +33,28 @@ var processTweetText = function(text) {
 	};
 }
 
+var convertDate = function(date) {
+	var sd = date.split(/\s/);
+	var year = parseInt(sd[5]);
+	var day = parseInt(sd[2]);
+	var month = sd[1];
+	var time = sd[3];
+
+	var ds = sd[0] + ', ' + day + ' ' + month + ' ' + year + ' ' + time; 
+	return Date.parse(ds);
+}
+
 var tweets = require('./booklist');
 
 function getBooks(callback) {
 
-	console.log(tweets.length);
 
 	twitter.getSearch({'q':'from:thetmkay #Read #booklist'}, errorFn, function(data) {
 		var json = JSON.parse(data);
 		for(var i = 0; i < json.statuses.length; i++) {
 			var tweet = json.statuses[i];
 			var textblock = processTweetText(tweet.text);
-			if(_.find(tweets, function(twt) { return tweet.id === twt })) {
+			if(_.find(tweets, function(twt) { return tweet.id === twt.id }) === undefined) {
 				tweets.push({
 					id: tweet.id,
 					title: textblock.title,
@@ -53,11 +63,11 @@ function getBooks(callback) {
 					date: tweet.created_at
 				});
 			}
-			console.log(textblock.text);
 		}
-		
-		var books = _.sortBy(tweets, 'date').reverse();
-
+		var books = _.sortBy(tweets, function(twt) {
+			var timeSince = convertDate(twt.date);
+			return timeSince;
+		}).reverse();
 		callback(books);
 	});
 }
@@ -68,12 +78,14 @@ function getBooks(callback) {
 
 var view_paths = [
   path.join(__dirname,'views'),
+  path.join(__dirname, 'node_modules', 'gn_components', 'views'),
+  path.join(__dirname, '..', 'gn_components', 'views')
 ];
 
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));
 
 env.addFilter('date', function(date, format) {
-  return moment(date).format(format);
+  return moment(new Date(date)).format(format);
 });
 
 env.express(app);

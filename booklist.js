@@ -10,7 +10,7 @@ module.exports = [{
 	"title":"Prelude to Foundation",
 	"author":"Isaac Asimov",
 	"date":"Wed Jun 17 22:23:51 +0000 2015",
-	"text":"Grateful that there's more to read. Accurately says \"staggering\" on the cover."
+	"text":"Grateful that there's more to read. Accurately says \'staggering\' on the cover."
 },
 {
 	"id":599916388350881793,
