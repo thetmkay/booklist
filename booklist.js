@@ -54,7 +54,7 @@ module.exports = [{
 	"date":"Sat Jun 20 11:02:23 +0000 2015",
 	"text":"A crazy book really. Good kind of crazy though. So it goes."
 },
-{
+/*{
 	"id":584864544285188097,
 	"title":"The Last Question",
 	"author":"Isaac Asmiov",
@@ -67,7 +67,7 @@ module.exports = [{
 	"author":"Isaac Asimov",
 	"date":"Sun Apr 05 23:45:48 +0000 2015",
 	"text":"Short and great reads."
-},
+},*/
 {
 	"id":565610173012914176,
 	"title":"The Rest of Robots",
