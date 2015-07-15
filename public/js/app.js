@@ -14,7 +14,7 @@
 			var font = fonts[i];
 			var observer = new FontFaceObserver(font, opts[i]);
 			observer.check().then((function(font) {
-				var fontclass = font.toLowerCase().replace(' ','-');
+				var fontclass = font.toLowerCase().replace(/ /g,'-');
 				console.log(fontclass);
 				document.body.className += " " + fontclass;
 			}).bind(this,font), (function() {

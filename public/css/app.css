@@ -235,7 +235,7 @@ html, body {
   /*font-weight: bold;*/
   font-family: serif;
   font-size: 20px;
-  quotes: "“" "”";
+  quotes: '\201C' '\201D';
 }
 
 /* line 107, ../../src/scss/app.scss */
