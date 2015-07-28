@@ -25,12 +25,17 @@ var errorFn = function(err, response, body) {
 var processTweetText = function(text) {
 	//text = text.replace(/#Read/, 'Read');
 	//text = text.replace(/\s#booklist/, '');
-	matches = /^[^\"]*"([^\"]*)" by ([^\.]*)\. (.*) #booklist$/.exec(text);
-	return {
-		title:matches[1],
-		author:matches[2],
-		text:matches[3]
-	};
+	matches = /^[^\"]*"([^\"]*)" by ([^\.]*)\.(.*)#booklist$/.exec(text);
+	if(!matches || matches.length < 3) {
+		console.log(text);
+		return false;	
+	} else {
+		return {
+			title:matches[1].trim(),
+			author:matches[2].trim(),
+			text:matches[3].trim()
+		};
+	}
 }
 
 var convertDate = function(date) {
@@ -54,6 +59,9 @@ function getBooks(callback) {
 		for(var i = 0; i < json.statuses.length; i++) {
 			var tweet = json.statuses[i];
 			var textblock = processTweetText(tweet.text);
+			if(!textblock) {
+				continue;
+			}
 			if(_.find(tweets, function(twt) { return tweet.id === twt.id }) === undefined) {
 				tweets.push({
 					id: tweet.id,
