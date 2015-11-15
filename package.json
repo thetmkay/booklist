@@ -3,6 +3,10 @@
   "version": "0.0.4",
   "description": "booklist  ============= book page for gn.com",
   "main": "app.js",
+  "engines": {
+    "node": "~4.1.2",
+    "npm": "3.3.5"
+  },
   "scripts": {
     "start": "ENV=development node server.js",
     "deploy": "ENV=production node server.js"
