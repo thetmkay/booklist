@@ -36,7 +36,6 @@ var convertDate = function(date) {
 	return moment(date,'MMMM DD, YYYY at h:mA').format('l');
 }
 
-var tweets = require('./booklist');
 
 function getBooks(callback) {
 	bookSheet.getRows(1,{'start-index':2,'reverse':false},function(err,rows) {
@@ -60,7 +59,7 @@ function getBooks(callback) {
 
 var view_paths = [
   path.join(__dirname,'views'),
-  footer.html
+  footer.views
 ];
 
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));

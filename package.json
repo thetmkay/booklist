@@ -8,8 +8,8 @@
     "npm": "3.3.5"
   },
   "scripts": {
-    "start": "ENV=development node server.js",
-    "deploy": "ENV=production node server.js"
+    "start": "node server.js",
+	"build":"compass compile"
   },
   "repository": {
     "type": "git",

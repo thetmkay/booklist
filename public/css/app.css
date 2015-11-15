@@ -1,5 +1,16 @@
 @charset "UTF-8";
-/* line 1, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 850, ../../node_modules/gn-components/scss/_mixins.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 3, ../../node_modules/gn-components/footer/footer.scss */
 .footer {
   padding-top: 10px;
   width: 100%;
@@ -9,19 +20,19 @@
   height: 5em;
 }
 
-/* line 10, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 12, ../../node_modules/gn-components/footer/footer.scss */
 html {
   height: 100%;
 }
 
-/* line 14, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 16, ../../node_modules/gn-components/footer/footer.scss */
 body {
   min-height: 100%;
   padding-bottom: 5em;
   position: relative;
 }
 
-/* line 20, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 22, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-section {
   width: 100%;
   margin: 0 auto;
@@ -29,64 +40,64 @@ body {
   text-align: center;
 }
 
-/* line 27, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 29, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-section.links {
   padding-bottom: 1em;
 }
 
-/* line 31, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 33, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-section .link {
   border: none;
   color: #aaa;
 }
-/* line 34, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 36, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-section .link:hover {
   color: #ccc;
   border: none;
 }
 
-/* line 41, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 43, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-title {
   font-size: 10px;
   font-weight: 400;
   display: inline-block;
 }
-/* line 45, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 47, ../../node_modules/gn-components/footer/footer.scss */
 .ack .ftr-title {
   text-align: left;
   font-size: 12px;
 }
 
-/* line 51, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 53, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-link-mod {
   font-size: 14px;
   display: inline-block;
 }
 
-/* line 57, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 59, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-link {
   font-weight: 400;
   padding-left: 10px;
 }
 
-/* line 62, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 64, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-link:hover {
   text-decoration: underline;
 }
 
-/* line 66, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 68, ../../node_modules/gn-components/footer/footer.scss */
 .ftr-link.border-right {
   border-right: solid 1px #aaa;
   padding-right: 10px;
 }
 
-/* line 71, ../../node_modules/gn_components/scss/gn/footer.scss */
+/* line 73, ../../node_modules/gn-components/footer/footer.scss */
 .ack .ftr-link {
   font-weight: 400;
 }
 
 @media print {
-  /* line 76, ../../node_modules/gn_components/scss/gn/footer.scss */
+  /* line 78, ../../node_modules/gn-components/footer/footer.scss */
   .footer {
     display: none;
   }
@@ -123,7 +134,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-/* line 850, ../../node_modules/gn_components/scss/gn/_mixins.scss */
+/* line 850, ../../node_modules/gn-components/scss/_mixins.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
