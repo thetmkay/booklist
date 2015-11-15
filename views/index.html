@@ -11,12 +11,10 @@
 		</div>
 		<div class="bk-list">
 		{% for book in books %}
-			{% if (book.id | string | length) > 0 %}
 			<div class="bk-block">
 				<span class="bk-click"><span class="bk-title-block"><h3 class="bk-title">{{ book.title }}</h3><h4 class="bk-author">{{book.author}}</h4></span></span>
-				<div class="bk-target"><p class="bk-text">{{ book.text }}</p><p class="bk-date">{{book.date | date('l')  }}</p></div>
+				<div class="bk-target"><p class="bk-text">{{ book.text }}</p><p class="bk-date">{{book.date  }}</p></div>
 			</div>
-			{% endif %}
 		{% endfor %}
 		</div>
 		{% include 'footer.html' %}
