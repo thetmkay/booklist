@@ -1,10 +1,11 @@
 {
-  "name": "booklist",
+  "name": "gn-booklist",
   "version": "0.0.3",
   "description": "booklist  ============= book page for gn.com",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "ENV=development node server.js",
+    "deploy": "ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,22 +18,14 @@
   },
   "homepage": "https://github.com/thetmkay/booklist",
   "dependencies": {
-    "components": "thetmkay/gn-components",
     "consolidate": "^0.10.0",
     "express": "^4.9.8",
-    "grunt": "^0.4.5",
-    "grunt-concurrent": "^2.0.0",
-    "grunt-contrib-compass": "^1.0.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-env": "^0.4.4",
-    "grunt-nodemon": "^0.4.0",
-    "load-grunt-subtasks": "thetmkay/load-grunt-subtasks",
+    "fontfaceobserver": "^1.5.0",
+    "gn-components": "thetmkay/gn-components",
+    "google-spreadsheet": "^1.0.1",
     "moment": "^2.10.3",
     "nunjucks": "^1.1.0",
-    "twitter-node-client": "thetmkay/TwitterJSClient",
     "underscore": "^1.8.3"
   },
-  "devDependencies": {
-    "fontfaceobserver": "^1.5.0"
-  }
+  "devDependencies": {}
 }
