@@ -1,6 +1,6 @@
 {
   "name": "gn-booklist",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "booklist  ============= book page for gn.com",
   "main": "app.js",
   "engines": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-	"build":"compass compile"
+    "build": "compass compile"
   },
   "repository": {
     "type": "git",
